@@ -57,36 +57,50 @@
 
                 </div>
                 {{/each}}
-                  </script>
-               <!--  <div class="cart-product">
-                   
-                    <figure class="items item-fig">
-                        <img class="cart-img" src="/assets/T1.jpg" alt="t-shirt" >
-                        <figcaption>
-                            <span class="item-title">Solid green cotton tshirt</span>
-                            <small class="text-desc">Style # MSI#$$ </small>
-                            <small class="text-desc">color : Blue</small>
-                            <small class="p-container-bottom">
-                                <a href="#">EDIT</a> <a href="#"> Remove</a></button>
-                                <a href="#">Save For laters</a>
-                            </small>
-                        </figcaption>
-                    </figure>
-                    <span class="size">S
-                    </span>
-                    <span class="qty"><small>2</small></span>
-                    <span class="price">100</span>
-
-                </div> -->
+              </script>
             </section>
 
         </main>
-        <div>
-            <aside>
+        <div class="container-fluid footer-sectioin">
+            <aside class="support">
+                <p>Need help or have questions?</p>
+                <span> Call customer services at</span>
+                <span>1-800-555-555</span>
+                <a>Chat with one of our sttylist</a>
+
+                <a>See return & exchange policy</a>
             </aside>
-            <section>
-                <div class="coupon"></div>
-                <div class="total"></div>
+            <section class="coupon-section">
+                <div class="coupon">
+                    <div class="title-promo">Enter promotion code or gift card</div>
+                    <div class="coupon-desc">
+                        <input type="text" id="p-coupon" />
+                        <button id="apply-coupons">Apply</button>
+                    </div>
+                </div>
+                <div class="coupon-info">
+                        <span class="left">SUBTOTAL</span>
+                        <span class="right">$30</span>
+                </div>
+                <div class="coupon-info">
+                    <span calss="left">PROMOTION CODE JF10 applied</span>
+                    <span class="right">- $1</span>
+                </div>
+                <div class="coupon-info">
+                    <span class="left">ESTIMATED SHIPPING*</span>
+                    <span class="right">FREE</span>
+                </div>
+                <div class="total">
+                    <div class="left">
+                        <div class="uppercase">ESTIMATED TOTAL</div>
+                        <small>Tax will be applied dusring checkout</small>
+                    </div>
+                    <div class="right" id="estimated-total"> $30</div>
+                </div>
+                <div class="checkout-container">
+                    <a class="left uppercase continue-shopping" href="#"> CONTINUE SHOPPING </a>
+                    <button class="right checkout">CHECKOUT</button> 
+                </div>
             </section>
         </div>
 

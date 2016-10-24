@@ -183,8 +183,82 @@ textarea {
     border:0;
     padding: 0
 }
-
-
+.support{
+    width: 25%;
+    float: left;
+    display: inline-block;
+}
+.coupon-section{
+    width: 60%;
+    display: inline-block;
+    float: left;
+    margin-left: 15%;
+    margin-bottom: 2%;
+}
+.footer-sectioin{
+    margin-top: 30px;
+}
+.title-promo{
+    display: inline-block;
+    width: 25%;
+}
+.coupon{
+    border-bottom: 5px solid #c5c5c5;
+    padding-bottom: 30px;
+}
+.coupon-desc{
+    display: inline-block;
+    float: right;
+    margin-left: 5%;
+}
+.coupon-info{
+    padding: 15px 0;
+}
+.coupon-info .left, .total .left{
+    float: left;
+}
+.coupon-info .right, .total .right{
+    float: right;
+}
+.total{
+    clear: both;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 5px solid #c5c5c5;
+    overflow: hidden;
+}
+.total small{
+    display: inline-block;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+#p-coupon{
+    padding:7px;
+}
+#apply-coupons{
+    padding: 5px 15px;
+    margin-left: 15px;
+}
+.checkout-container{
+    padding-bottom: 30px;
+    margin-left: 50%;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.continue-shopping{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 40px;
+}
+.checkout{
+    padding: 10px;
+}
 @media screen and (max-width: 764px) {
    .items{
     width: 100%;
@@ -244,7 +318,7 @@ textarea {
    }
 }
 
-@media screen and (min-width: 480px) {
+/*@media screen and (min-width: 480px) {
     body {
         background-color: lightgreen;
     }
@@ -255,7 +329,7 @@ textarea {
         background: url(email-icon.png) left center no-repeat;
     }
 
-
+*/
 
 
 
