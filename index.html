@@ -28,7 +28,7 @@
         </header>
         <main class="container-fluid">
             <ul class="sub-header">
-                <li class="items"> ITEMS </li>
+                <li class="title-items"> ITEMS </li>
                 <li class="size"> SIZE </li>
                 <li class="qty">QTY</li>
                 <li class="price">PRICE</li>
@@ -44,16 +44,16 @@
                             <span class="item-title">{{p_variation}} {{p_name}}</span>
                             <small class="text-desc">Style {{p_style}} </small>
                             <small class="text-desc">color : Blue</small>
-                            <small class="p-container-bottom">
+                            <span class="size product-size">S</span>
+                            <span class="qty product-qty"><small>{{p_quantity}}</small></span>
+                            <span class="price product-price">{{c_currency}}{{p_price}}</span>
+                            <div class="p-container-bottom">
                                 <a href="#">EDIT</a> <a href="#"> Remove</a></button>
                                 <a href="#">Save For laters</a>
-                            </small>
+                            </div>
                         </figcaption>
                     </figure>
-                    <span class="size">S
-                    </span>
-                    <span class="qty"><small>{{p_quantity}}</small></span>
-                    <span class="price">{{c_currency}}{{p_price}}</span>
+                    
 
                 </div>
                 {{/each}}

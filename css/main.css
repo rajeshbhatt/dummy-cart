@@ -113,12 +113,28 @@ textarea {
 }
 .items{
     /* @todo check*/
-    width: 68%;  
+    width: 100%;  
+}
+.title-items{
+    width: 64%;
 }
 .size, .qty, .price{
     width: 10%;
     display: inline-block;
     text-align: center;
+}
+.product-size, .product-qty, .product-price{
+    position: absolute;
+    top: 0;
+}
+.product-size{
+    left: 64%;
+}
+.product-qty{
+    left: 74%;
+}
+.product-price{
+    left: 84%;
 }
 .qty small{
     border: 1px solid #c5c5c5;
@@ -138,6 +154,8 @@ textarea {
 }
 .items figcaption{
     display: inline-block;
+    width: 78%;
+    float: right;
 }
 .item-fig{
     margin: 0;
@@ -167,6 +185,75 @@ textarea {
 }
 
 
+@media screen and (max-width: 764px) {
+   .items{
+    width: 100%;
+   }
+   .cart-img{
+    width: 151px;
+    padding-right: 20px;
+   }
+   .sub-header{
+    border-top: none;
+   }
+   .sub-header li{
+    display: none;
+   }
+   .cart-img{
+    float: left;
+   }
+   .items figcaption{
+    display: inline;
+   }
+   .p-container-bottom{
+    position: static;
+    clear: both;
+    padding-top: 10px;
+   }
+   .size{
+    width: inherit;
+   }
+   span.size::before{
+    content: "SIZE: ";
+    font-size: 10px;
+    width: inherit;
+   }
+   .qty{
+    display: block;
+    width: inherit;
+    text-align: left;
+   }
+   .qty::before{
+    content: "QTY: ";
+    font-size: 10px;
+   }
+   .product-size{
+    left: 18%;
+    top: 40%;
+   }
+   .items figcaption{
+    float: none;
+   }
+   .product-qty{
+    left: 51%;
+    top: 50%;
+   }
+   .product-price{
+    left: 49%;
+    top: 69%;
+   }
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+@media screen and (max-width: 699px) and (min-width: 520px) {
+    ul li a {
+        padding-left: 30px;
+        background: url(email-icon.png) left center no-repeat;
+    }
 
 
 
