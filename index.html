@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     </head>
@@ -22,39 +23,50 @@
 
         <!-- Add your site or application content here -->
         <header class="container-fluid">
-            <h1>
+            <h1 class="col-md-12 col-xs-8">
                 YOUR SHOPPING BAG
             </h1>
+            <h2 class="col-xs-2 pull-right visible-xs">Items</h2>
         </header>
         <main class="container-fluid">
-            <ul class="sub-header">
-                <li class="title-items"> ITEMS </li>
-                <li class="size"> SIZE </li>
-                <li class="qty">QTY</li>
-                <li class="price">PRICE</li>
+            <ul class="sub-header hidden-xs row">
+                <li class="col-md-6"> ITEMS </li>
+                <li class="col-md-2"> SIZE </li>
+                <li class="col-md-2">QTY</li>
+                <li class="col-md-2">PRICE</li>
             </ul>
             <section class="product-container content-placeholder">
                 <script id="content-placeholder" type="text/x-handlebars-template">
                 {{#each productsInCart}}
-                <div class="cart-product" id="cart-product">
-                    <!-- todo template for cart items -->
-                    <figure class="items item-fig">
-                        <img class="cart-img" src="/assets/T{{p_id}}.jpg" alt="t-shirt" >
-                        <figcaption>
-                            <span class="item-title">{{p_variation}} {{p_name}}</span>
-                            <small class="text-desc">Style {{p_style}} </small>
-                            <small class="text-desc">color : Blue</small>
-                            <span class="size product-size">S</span>
-                            <span class="qty product-qty"><small>{{p_quantity}}</small></span>
-                            <span class="price product-price">{{c_currency}}{{p_price}}</span>
-                            <div class="p-container-bottom">
-                                <a href="#">EDIT</a> <a href="#"> Remove</a></button>
-                                <a href="#">Save For laters</a>
-                            </div>
-                        </figcaption>
-                    </figure>
+                <div class="cart-product row clearfix" id="cart-product">
                     
 
+                    <div class="col-md-3 col-xs-6">
+                        <img class=" " src="/assets/T{{p_id}}.jpg" alt="product-image" />
+                    </div>
+                    <div class="col-md-3 col-xs-6 item-desc">
+                            <p class="item-title">{{p_variation}} {{p_name}}</p>
+                            <p class="text-desc grey">Style #: {{p_style}} </p>
+                            <p class="text-desc grey">color : Blue</p>
+                    </div>
+                    <div class="col-md-2 col-xs-6">
+                        <span class="size product-size"> <small class="visible-xs">Size: </small>S</span>
+                    </div>
+                    <div class="col-md-2 col-xs-6">
+                        <span class="qty product-qty"><small class="visible-xs">QTY: &nbsp</small><small class="qty">{{p_quantity}}</small></span>
+                    </div>
+                    <div class="col-md-2 col-xs-6">
+                        <span class="price product-price">{{c_currency}}{{p_price}}</span>
+                    </div>
+                   
+
+                </div>
+                <div class="row footer-border clearfix">
+                    <div class="col-md-3 col-xs-12 col-md-push-3 item-footer">
+                        <a class="col-md-2 col-xs-4" href="#">EDIT</a> 
+                        <a class="col-md-4 col-xs-4" href="#"> Remove</a>
+                        <a class="col-md-5 col-xs-4" href="#">Save For later</a>
+                    </div>
                 </div>
                 {{/each}}
               </script>
@@ -62,50 +74,56 @@
 
         </main>
         <div class="container-fluid footer-sectioin">
-            <aside class="support">
-                <p>Need help or have questions?</p>
-                <span> Call customer services at</span>
-                <span>1-800-555-555</span>
-                <a>Chat with one of our sttylist</a>
-
-                <a>See return & exchange policy</a>
+            <aside class="support col-md-5 hidden-xs">
+                <div class="col-md-7">
+                    <p>Need help or have questions?</p>
+                    <p> Call customer services at</p>
+                    <p>1-800-555-555</p>
+                    <p>
+                        <a>Chat with one of our sttylist</a>
+                    </p>
+                    <p>
+                        <a>See return & exchange policy</a>
+                    </p>
+                </div>
             </aside>
-            <section class="coupon-section">
-                <div class="coupon">
-                    <div class="title-promo">Enter promotion code or gift card</div>
-                    <div class="coupon-desc">
-                        <input type="text" id="p-coupon" />
-                        <button id="apply-coupons">Apply</button>
+            <section class="coupon-section col-md-7">
+                <div class="col-md-12 col-xs-12 promo-section">
+                    <div class="col-xs-6 col-xs-push-2 title-promo col-md-4">Enter promotion code or gift card</div>
+                    <div class="col-md-8 col-xs-12  input-coupon">
+                        <input class="col-md-7" type="text" id="p-coupon" />
+                        <button class="col-md-4 pull-right" id="apply-coupons">Apply</button>
                     </div>
                 </div>
-                <div class="coupon-info">
-                        <span class="left">SUBTOTAL</span>
-                        <span class="right">$30</span>
+                <div class="coupon-info col-md-12">
+                        <span class="col-xs-6 col-md-6 text-left">SUBTOTAL</span>
+                        <span class="col-xs-6 col-md-6 text-right">$30</span>
                 </div>
-                <div class="coupon-info">
-                    <span calss="left">PROMOTION CODE JF10 applied</span>
-                    <span class="right">- $1</span>
+                <div class="coupon-info col-md-12">
+                    <span class="col-xs-6 col-md-6 text-left">PROMOTION CODE JF10 applied</span>
+                    <span class="col-xs-6 col-md-6 text-right">- $1</span>
                 </div>
-                <div class="coupon-info">
-                    <span class="left">ESTIMATED SHIPPING*</span>
-                    <span class="right">FREE</span>
+                <div class="coupon-info col-md-12">
+                    <span class="col-xs-6 col-md-6 text-left">ESTIMATED SHIPPING*</span>
+                    <span class="col-xs-6 col-md-6 text-right">FREE</span>
                 </div>
-                <div class="total">
-                    <div class="left">
+                <div class="total col-md-12">
+                    <div class="col-md-6 text-left">
                         <div class="uppercase">ESTIMATED TOTAL</div>
                         <small>Tax will be applied dusring checkout</small>
                     </div>
-                    <div class="right" id="estimated-total"> $30</div>
+                    <div class="col-md-6 text-right" id="estimated-total"> $30</div>
                 </div>
-                <div class="checkout-container">
-                    <a class="left uppercase continue-shopping" href="#"> CONTINUE SHOPPING </a>
-                    <button class="right checkout">CHECKOUT</button> 
+                <div class="checkout-container pull-right col-md-7">
+                    <a class="left col-md-8 uppercase continue-shopping" href="#"> CONTINUE SHOPPING </a>
+                    <button class="right col-md-4 checkout">CHECKOUT</button> 
                 </div>
             </section>
         </div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
