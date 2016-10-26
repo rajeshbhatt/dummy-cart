@@ -318,9 +318,16 @@ aside a{
     }
     .title-promo{
         text-align: center;
+        left: 16.66666667%
     }
     .input-coupon{
         margin-top: 10px;
+    }
+    .continue-shopping{
+        text-align: center;
+    }
+    .checkout-container a{
+        bottom: -60px;
     }
 }
 /*@media screen and (max-width: 764px) {
